@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort        # You can switch to ClusterIP if desired
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80           # port exposed inside the cluster
+      targetPort: 80     # port on the pod/container
+      nodePort: 30080    # external node port (only for NodePort service)
