@@ -45,8 +45,6 @@ eksctl create cluster \
   --nodes-max 4 \
   --managed
 
-  Here’s a sample `README.md` section with **ArgoCD login instructions** that you can include in your project:
-
 ---
 
 ## 🔐 ArgoCD Login Instructions
