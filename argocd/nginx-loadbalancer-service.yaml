@@ -1,0 +1,13 @@
+# Optional LoadBalancer Service to expose NGINX externally (Replace nginx-service.yaml or create a new file)
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-loadbalancer-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80          # service port inside cluster
+      targetPort: 80    # container port
